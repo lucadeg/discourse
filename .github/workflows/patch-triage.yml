@@ -1,3 +1,4 @@
+
 # Patch Triage
 #
 # Runs on every non-draft pull request. Fetches the PR diff and sends it to
@@ -11,8 +12,6 @@
 name: Patch Triage
 
 on:
-  pull_request:
-    types: [opened, synchronize, ready_for_review, closed]
   workflow_dispatch:
     inputs:
       pr_number:
@@ -20,6 +19,7 @@ on:
         required: true
         type: string
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   statuses: write
   pull-requests: read

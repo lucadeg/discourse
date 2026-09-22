@@ -1,3 +1,4 @@
+
 name: Release - create tags & branches
 
 on:
@@ -7,12 +8,7 @@ on:
         description: "The commit SHA to prepare the release for"
         required: false
         type: string
-  push:
-    branches:
-      - main
-    paths:
-      - "lib/version.rb"
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: write
   pull-requests: write

@@ -1,3 +1,4 @@
+
 name: Release Branch Handler
 
 on:
@@ -7,10 +8,7 @@ on:
         description: "The release branch, e.g. `release/2025.01`"
         required: true
         type: string
-  push:
-    branches:
-      - release/*
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: write
   pull-requests: write

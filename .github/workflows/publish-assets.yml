@@ -1,16 +1,9 @@
+
 name: Publish Assets
 
 on:
-  push:
-    branches:
-      - main
-      - stable
-      - release/*
-      - precompile-asset-improvements
-    tags:
-      - beta
-      - v*
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: publish-assets-${{ format('{0}-{1}', github.run_number, github.job) }}
   cancel-in-progress: true

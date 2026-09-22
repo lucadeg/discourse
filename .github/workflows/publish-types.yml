@@ -1,13 +1,9 @@
+
 name: Publish @discourse/types package
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "lib/version.rb"
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: read
   id-token: write

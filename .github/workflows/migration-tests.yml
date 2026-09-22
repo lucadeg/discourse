@@ -1,18 +1,9 @@
+
 name: Migration Tests
 
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/migration-tests.yml"
-      - "migrations/**"
-  push:
-    branches:
-      - main
-      - stable
-    paths:
-      - ".github/workflows/migration-tests.yml"
-      - "migrations/**"
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: migration-tests-${{ format('{0}-{1}', github.head_ref || github.run_number, github.job) }}
   cancel-in-progress: true
